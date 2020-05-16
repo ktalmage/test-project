@@ -1,3 +1,7 @@
-<h1>Welcome !</h1>
+<h1>Welcome ! <%=@user.name%></h1>
 <p><%= @user %></p>
 
+<h1>Investments </h1>
+<% @investments.each do |investment| %>
+  <div><%= link_to "#{investment.name}", investment_path(investment) %></div>
+<% end %>
